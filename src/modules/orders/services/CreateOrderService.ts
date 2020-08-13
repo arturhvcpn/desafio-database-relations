@@ -40,7 +40,7 @@ class CreateOrderService {
       return {id: product.id};
     });
 
-    const productsData = await this.productsRepository.findAllById(products);
+    const productsData = await this.productsRepository.findAllById(productsIds);
 
     const productsFinal = productsData.map( productData =>{
       const productFinal = products.find(
